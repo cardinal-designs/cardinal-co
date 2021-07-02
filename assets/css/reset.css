@@ -63,3 +63,6 @@ button {
 	border: 0;
 	background: none;
 }
+input,textarea {
+	border-radius: 0;
+}
