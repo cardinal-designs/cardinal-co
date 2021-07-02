@@ -322,7 +322,7 @@ p {
   z-index: 9;
   overflow: hidden;
   background: white;
-  transition: width, height 0.5s cubic-bezier(0.65, 0, 0.35, 1), background 0.3s ease;
+  transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1), background 0.3s ease;
 }
 
 .menu.is-open {
@@ -497,6 +497,7 @@ p {
     left: 0;
     right: 0;
     background: var(--charcoal);
+    transition: height 0.3s cubic-bezier(0.65, 0, 0.35, 1), background 0.3s ease;
   }
 
   .menu.is-open {
