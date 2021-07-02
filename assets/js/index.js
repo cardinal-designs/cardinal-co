@@ -3,10 +3,12 @@
 ==============================================================================*/
 /*================ Menu open / close ================*/
 $('.menu-sidebar').click(function() {
+  $('html').toggleClass('no-scroll');
   $('.menu').toggleClass('is-open');
 });
 
 $('.menu__close').click(function() {
+  $('html').toggleClass('no-scroll');
   $('.menu').toggleClass('is-open');
 });
 
@@ -17,6 +19,26 @@ $('.menu-content__links a').mouseenter(function() {
 
 $('.menu-content__links a').mouseleave(function() {
   $('.menu').removeClass('link-selected');
+});
+
+/*================ Mobile Menu open / close ================*/
+$('.header__menu').click(function() {
+  $('html').toggleClass('no-scroll');
+  $('.menu').toggleClass('is-open');
+  $('.header').toggleClass('is-open');
+});
+
+/*================ Mobile Menu Scroll ================*/
+$(window).scroll(function() {
+  if ($(window).width() < 768) {
+    if ($(window).scrollTop() > 20) {
+      if (!$('.header').hasClass('is-scrolled')) {
+        $('.header').addClass('is-scrolled');
+      }
+    } else {
+      $('.header').removeClass('is-scrolled');
+    }
+  }
 });
 
 /*============================================================================
