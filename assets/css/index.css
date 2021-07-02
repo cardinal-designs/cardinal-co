@@ -137,6 +137,11 @@ p {
   letter-spacing: 0.05em;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /*================ Buttons ================*/
 .btn {
   font-family: sofia-pro, sans-serif;
@@ -614,7 +619,7 @@ p {
 
 .header__menu {
   width: 30px;
-  height: 10px;
+  height: 30px;
   position: relative;
   cursor: pointer;
 }
@@ -624,7 +629,7 @@ p {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10px;
   border-top: 1px solid black;
   transition: .3s ease;
   -webkit-transition: .3s ease;
@@ -632,11 +637,11 @@ p {
 }
 
 .header__menu::after {
-  content: '';
+  content: ''; 
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 10px;
   border-bottom: 1px solid black;
   transition: .3s ease;
   -webkit-transition: .3s ease;
@@ -645,13 +650,13 @@ p {
 
 .header.is-open .header__menu::before {
   transform: rotate(45deg);
-  top: 4px;
+  top: 14px;
   border-color: white;
 }
 
 .header.is-open .header__menu::after {
   transform: rotate(-45deg);
-  bottom: 5px;
+  bottom: 15px;
   border-color: white;
 }
 
@@ -741,14 +746,8 @@ html {
 }
 
 /*================ Main ================*/
-.main-container {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
 .main {
   width: 100%;
-  max-width: 1440px;
   padding-left: 50px;
   display: inline-block;
 }
@@ -1115,6 +1114,7 @@ html {
   }
 
   .work-home__grid {
+    max-width: 100%;
     padding: 0;
     grid-template-columns: 1fr 1fr;
     gap: 0 20px;  
@@ -1358,10 +1358,6 @@ html {
   .testimonials-home__logo svg {
     max-width: 100%;
     height: auto;
-  }
-
-  .testimonials-home__logo path {
-    stroke-width: 5px;
   }
 }
 
@@ -2151,5 +2147,61 @@ html {
 
   .services-page__text-content {
     padding: 0;
+  }
+}
+
+/*============================================================================
+  404
+==============================================================================*/
+.page-404 .page {
+  position: relative;
+}
+
+.page-404__container {
+  min-height: 100vh;
+  padding: 205px 0 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-404__container h1 {
+  margin-bottom: 50px;
+}
+
+.page-404__container h1 .text {
+  position: relative;
+  z-index: 2;
+}
+
+.page-404__container h1 .circle {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-404__container h1 .circle svg {
+  position: absolute;
+  top: 4px;
+  z-index: 1;
+}
+
+.page-404__container p {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .page-404__container {
+    padding: 195px 0 100px;
+  }
+
+  .page-404__container h1 .circle svg {
+    max-width: 125px;
+    height: auto;
+  }
+
+  .page-404__container p {
+    margin-bottom: 130px;
   }
 }
