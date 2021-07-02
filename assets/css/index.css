@@ -1956,6 +1956,7 @@ html {
 
 .work__header {
   max-width: 703px;
+  padding-bottom: 80px;
 }
 
 .work__header h2 {
@@ -1978,6 +1979,16 @@ html {
 
 .work__header .underline .text {
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .work__header {
+    padding-bottom: 40px;
+  }
+
+  .work__header h2 {
+    margin-bottom: 30px;
+  }
 }
 
 /*============================================================================
