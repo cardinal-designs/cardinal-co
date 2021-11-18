@@ -1478,9 +1478,10 @@ html {
 .partners-home__grid {
   max-width: 800px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 50px;
 }
 
 .partners-home__grid-item p {
@@ -1494,7 +1495,12 @@ html {
 
   .partners-home__grid {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 30px;
+  }
+
+  .partners-home__grid-item svg {
+    height: 27px;
+    width: auto;
   }
 }
 
