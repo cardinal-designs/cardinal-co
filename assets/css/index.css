@@ -283,21 +283,13 @@ a {
 ==============================================================================*/
 /*================ Work Grid ================*/
 .work-home__grid {
-  padding-left: 100px;
+  padding-left: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px 70px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 60px 30px;
 }
 
 /*================ Work Grid Item ================*/
-.work-grid-item:nth-child(3n + 1) {
-  padding-top: 120px;
-}
-
-.work-grid-item:nth-child(3n + 3) {
-  padding-top: 60px;
-}
-
 .work-grid-item__image {
   padding-bottom: 135%;
   position: relative;
@@ -329,12 +321,13 @@ a {
 }
 
 .work-grid-item__content h3.sh {
-  margin-bottom: 7px;
+  margin-bottom: 0;
 }
 
 .work-grid-item__content p {
   margin: 0;
   color: var(--gray);
+  font-size: 11px;
 }
 
 /*============================================================================
